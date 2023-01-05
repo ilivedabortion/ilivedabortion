@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p25" frameDuration="100/2500s" width="1280" height="720"></format>
+        <format id="r2" name="FFVideoFormatRateUndefined"></format>
+        <media id="r3" name="MLS">
+            <sequence format="r1" duration="256s" tcStart="3600s" tcFormat="NDF" audioRate="44.1k">
+                <spine>
+                    <gap name="Gap" offset="3600s" duration="256s" start="0s">
+                        <clip name="Join online meeting-44k_1.aif" lane="-1" offset="0s" duration="65536/44100s" format="r2">
+                            <audio ref="r4" duration="65536/44100s"></audio>
+                        </clip>
+                    </gap>
+                </spine>
+            </sequence>
+        </media>
+        <asset id="r4" name="Join online meeting-44k_1.aif" src="file:///Users/demouser/Downloads/Join%20online%20meeting-44k_1.aif" start="0s" duration="65536/44100s" hasAudio="1" audioChannels="2" audioRate="44100"></asset>
+    </resources>
+    <library>
+        <event name="Event for MLS">
+            <ref-clip name="MLS" ref="r3" duration="256s"></ref-clip>
+        </event>
+    </library>
+</fcpxml>
